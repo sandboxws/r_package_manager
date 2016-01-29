@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # MongoDB ODM
 gem 'mongoid', '~> 5.1'
+gem 'mongoid-slug'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
