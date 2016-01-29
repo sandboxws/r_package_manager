@@ -26,6 +26,7 @@ gem 'resque-scheduler', '~> 4.0'
 gem 'resque-web', '~> 0.0.7'
 
 gem 'app_box', '~> 0.2.5'
+gem 'httparty', '~> 0.13.7'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
