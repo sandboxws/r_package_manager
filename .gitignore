@@ -100,3 +100,8 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
