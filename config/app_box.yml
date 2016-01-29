@@ -1,2 +1,3 @@
 default:
   host: 'rpackages.local'
+  packages_cran_url: 'https://cran.r-project.org/src/contrib/PACKAGES'
