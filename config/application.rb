@@ -23,10 +23,18 @@ module RPackageManager
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Berlin'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    if Rails.env.development? || Rails.env.testing?
+      config.autoload_paths << "#{config.root}/lib"
+      config.autoload_paths << "#{config.root}/app/jobs"
+    else
+      config.eager_load_paths << "#{config.root}/lib"
+      config.eager_load_paths << "#{config.root}/app/jobs"
+    end
   end
 end
