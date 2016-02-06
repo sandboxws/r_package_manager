@@ -33,6 +33,7 @@ gem 'impressionist', '~> 1.5', '>= 1.5.1'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'kaminari', '~> 0.16.3'
+gem 'bootstrap-kaminari-views', '~> 0.0.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
