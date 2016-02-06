@@ -1,0 +1,17 @@
+<li id="package-<%= package_search.id %>">
+  <a href="/packages/<%= package_search.slug %>" title="<%= package_search.title %>">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>
+          <p class="package__search_downloads pull-right">
+            <%= number_with_delimiter package_search.downloads %>
+            <span class="small">downloads</span>
+          </p>
+          <%= package_search.title %>
+          <small><%= package_search.head_version.name %></small>
+        </h2>
+        <p><%= truncate package_search.description, length: 100 %></p>
+      </div>
+    </div>
+  </a>
+</li>

@@ -1,0 +1,18 @@
+<div class="search">
+  <h1 class="page-header">
+    Search
+    <% if @q %>
+      <small>for <%= @q %></small>
+    <% end %>
+  </h1>
+
+  <% if @packages.count == 0 %>
+    <p>No packages found</p>
+  <% else %>
+    <ul class="packages__search">
+      <%= render partial: 'package_search', collection: @packages %>
+    </ul>
+    <%= paginate @packages %>
+  <% end %>
+
+</div>

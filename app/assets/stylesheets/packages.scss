@@ -1,3 +1,42 @@
 // Place all the styles related to the package controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.search {
+  h1.page-header {
+    font-weight: normal;
+    small {
+      font-weight: 100;
+    }
+  }
+  ul.packages__search {
+    padding-left: 0;
+    li {
+      list-style-type: none;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 20px;
+      a {
+        color: #444;
+        h2 {
+          p.package__search_downloads {
+            font-size: 25px;
+            span.small {
+              display: block;
+            }
+          }
+        }
+        &:hover {
+          h2 {
+            color: #c03546;
+            -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+            -webkit-transition-property: color;
+            transition-property: color;
+            p.package__search_downloads {
+              color: #444;
+            }
+          }
+        }
+      }
+    }
+  }
+}
