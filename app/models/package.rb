@@ -34,4 +34,8 @@ class Package
   def has_version?(version_name)
     self.versions.collect(&:name).include?(version_name)
   end
+
+  def head_version
+    self.versions.last
+  end
 end
