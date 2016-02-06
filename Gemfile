@@ -57,5 +57,8 @@ group :development do
 
   # Mutes assets pipeline log messages
   gem 'quiet_assets', '~> 1.1'
+
+  # Ffaker generates dummy data
+  gem 'ffaker', '~> 2.2'
 end
 
