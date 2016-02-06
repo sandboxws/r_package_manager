@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'package/show'
 
+  get '/packages/:slug' => 'packages#show'
   get '/search' => 'packages#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
