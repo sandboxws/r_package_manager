@@ -1,5 +1,7 @@
 class PackagesController < ApplicationController
   def show
+    @package = Package.find params[:slug]
+    @versions = @package.versions.order(created_at: :desc)
   end
 
   def search

@@ -1,0 +1,41 @@
+<li>
+  <a href="/packages/<%= version.package.slug %>" title="<%= version.name %>">
+    <%= version.name %>
+  </a>
+  <p class="mute">
+    <%= version.publish_date %>
+  </p>
+
+  <div>
+    <% if version.dependencies.count > 0 %>
+      <span>dependencies: </span>
+      <% version.dependencies.each do |d| %>
+        <a href="/packages/<%= d %>" title="<%= d %>">
+          <%= d %>
+        </a>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div>
+    <% if version.suggestions.count > 0 %>
+      <span>suggestions: </span>
+      <% version.suggestions.each do |s| %>
+        <a href="/packages/<%= s %>" title="<%= s %>">
+          <%= s %>
+        </a>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div>
+    <% if version.imports.count > 0 %>
+      <span>imports: </span>
+      <% version.imports.each do |i| %>
+        <a href="/packages/<%= i %>" title="<%= i %>">
+          <%= i %>
+        </a>
+      <% end %>
+    <% end %>
+  </div>
+</li>

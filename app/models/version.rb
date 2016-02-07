@@ -4,7 +4,7 @@ class Version
   include Mongoid::Slug
 
   field :name, type: String
-  field :publish_date, type: Date
+  field :publish_date, type: String
   field :r_version, type: String
   field :downloads, type: Integer
   field :dependencies, type: Array, default: []
@@ -52,5 +52,14 @@ class Version
     version.package = package
 
     version
+  end
+
+  def download_url
+    # Download url format: http://cran.r­project.org/src/contrib/[PACKAGE_NAME]_[PACKAGE_VERSION].tar.gz
+    "http://cran.r-project.org/src/contrib/#{filename}"
+  end
+
+  def filename
+    "#{self.package.name}_#{name}.tar.gz"
   end
 end

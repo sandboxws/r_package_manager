@@ -8,6 +8,7 @@ class Package
   field :name, type: String
   field :title, type: String
   field :description, type: String
+  field :url, type: String
   field :downloads, type: Integer, default: 0
 
   slug :name
@@ -22,6 +23,8 @@ class Package
     package.save
 
     package.add_version! spec
+
+    package
   end
 
   def add_version!(spec)
@@ -36,6 +39,6 @@ class Package
   end
 
   def head_version
-    self.versions.last
+    self.versions.order(created_at: :desc).first
   end
 end

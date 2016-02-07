@@ -1,2 +1,24 @@
-<h1>Package#show</h1>
-<p>Find me in app/views/package/show.html.erb</p>
+<% content_for :title, @package.title %>
+
+<div class="show">
+  <h1 class="page-header">
+    <%= @package.title %>
+    <small><%= @package.head_version.name %></small>
+    <a href="<%= @package.head_version.download_url %>" type="button" class="btn btn-danger">Download</a>
+  </h1>
+
+  <p class="description">
+    <%= @package.description %>
+  </p>
+
+  <div class="row">
+    <div class="col-lg-12 versions">
+      <p class="mute">
+        versions:
+      </p>
+      <ul>
+        <%= render partial: 'version', collection: @versions %>
+      </ul>
+    </div>
+  </div>
+</div>
