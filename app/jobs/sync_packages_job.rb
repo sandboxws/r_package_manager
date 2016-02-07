@@ -1,3 +1,5 @@
+require 'dcf'
+
 class SyncPackagesJob
   @queue = :sync_packages
 
